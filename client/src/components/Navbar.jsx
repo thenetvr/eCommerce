@@ -24,6 +24,12 @@ export default function Navbar() {
       current: false,
       icon: IconThree,
     },
+    {
+      name: "Stripe",
+      href: "/stripe",
+      current: false,
+      icon: IconThree,
+    },
   ]);
 
   // handle refresh
