@@ -30,6 +30,36 @@ export default function Navbar() {
       current: false,
       icon: IconThree,
     },
+    {
+      name: "Store",
+      href: "/store",
+      current: false,
+      icon: IconThree,
+    },
+    {
+    name: "AssetMaker",
+    href: "/assetMaker",
+    current: false,
+    icon: IconThree,
+    },
+    {
+      name: "PlayerSearch",
+      href: "/playerSearch",
+      current: false,
+      icon: IconThree,
+    },
+    {
+      name: "SignUp",
+      href: "/signUp",
+      current: false,
+      icon: IconThree,
+    }, 
+    {
+      name: "SignIn",
+      href: "/signIn",
+      current: false,
+      icon: IconThree,
+    },
   ]);
 
   // handle refresh

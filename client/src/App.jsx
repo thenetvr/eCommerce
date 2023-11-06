@@ -12,6 +12,12 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 import Stripe from "./pages/Stripe";
+import Store from "./pages/Store";
+import AssetMaker from "./pages/AssetMaker";
+import PlayerSearch from "./pages/PlayerSearch";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+
 
 function Routing() {
   const location = useLocation();
@@ -22,6 +28,12 @@ function Routing() {
         <Route exact path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
         <Route path="/stripe" element={<Stripe />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/assetMaker" element={<AssetMaker />} />
+        <Route path="/playerSearch" element={<PlayerSearch />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/signIn" element={<SignIn />} />
+
         <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>
