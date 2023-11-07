@@ -32,6 +32,8 @@ export default function LoginForm() {
     const { email, password } = state;
 
     try {
+      // use built-in 'signIn' function with 'next-auth'
+      // pass 'credentials' provider found in 'api/auth/[...nextauth]/route.ts'
       const res = await signIn("credentials", {
         email,
         password,
@@ -43,6 +45,7 @@ export default function LoginForm() {
         return;
       }
 
+      // re-route to dashboard if login successful
       router.replace("/auth/dashboard");
     } catch (err) {
       console.log(err);
