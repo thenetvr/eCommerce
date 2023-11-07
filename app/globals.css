@@ -12,6 +12,11 @@ textarea {
   @apply shadow-md px-6 py-2 border border-slate-200;
 }
 
+/* styles for login form */
+input {
+  @apply w-[400px] border border-gray-200 py-2 px-6 bg-zinc-100/40;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
