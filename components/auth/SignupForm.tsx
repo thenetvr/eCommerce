@@ -90,7 +90,7 @@ export default function SignupForm() {
         email: "",
         password: "",
       });
-      router.push("/");
+      router.push("/auth/login");
     } catch (err) {
       console.log("Error during registration", err);
     }
