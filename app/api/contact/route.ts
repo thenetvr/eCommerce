@@ -7,20 +7,22 @@ export async function POST(req) {
   const { fullname, email, message } = await req.json();
 
   try {
+    // attempt to connect to MongoDB
     await connectDB();
 
+    // after successful connection, attempt to create new item in model
     await Contact.create({
       fullname,
       email,
       message,
     });
-    console.log("test");
 
     return NextResponse.json({
       msg: ["Message sent successfully"],
       success: true,
     });
   } catch (err) {
+    // retrieve all error messages and send back to user to display
     if (err instanceof mongoose.Error.ValidationError) {
       let errorList = [];
 

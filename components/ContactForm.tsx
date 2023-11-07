@@ -24,11 +24,13 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState([]);
 
+  // necessary type for 'e' for form functions
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const { fullname, email, message } = state;
 
+    // call API endpoint to create new DB collection instance
     const res = await fetch("api/contact", {
       method: "POST",
       headers: {
@@ -41,6 +43,7 @@ export default function ContactForm() {
       }),
     });
 
+    // retrieve and display status of creation
     const { msg, success } = await res.json();
     setError(msg);
     setSuccess(success);
@@ -91,6 +94,7 @@ export default function ContactForm() {
         </button>
       </form>
       <div className="bg-slate-100 flex flex-col">
+        {/* depending on message, change color */}
         {error &&
           error.map((e) => (
             <div
