@@ -1,6 +1,7 @@
 // Inspired by react-hot-toast library
 import * as React from "react"
 
+// USE-TOAST.TS uses TOAST.TSX
 import type {
   ToastActionElement,
   ToastProps,
