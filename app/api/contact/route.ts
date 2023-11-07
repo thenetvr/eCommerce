@@ -3,6 +3,16 @@ import connectDB from "@/lib/mongodb";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
+export async function GET() {
+  try {
+    await connectDB();
+    const all = await Contact.find();
+    return NextResponse.json(all);
+  } catch (err) {
+    return NextResponse.json({ msg: "Unable to send message." });
+  }
+}
+
 export async function POST(req) {
   const { fullname, email, message } = await req.json();
 
