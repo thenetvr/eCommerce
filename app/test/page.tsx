@@ -59,6 +59,14 @@ export default function Test() {
 
   return (
     <div>
+      <h1>
+        <a
+          href="https://ui.shadcn.com/docs/components/combobox"
+          target="_blank"
+        >
+          <strong className="text-green-500 text-8xl">Shadcn docs</strong>
+        </a>
+      </h1>
       <Button>Click Me</Button>
       {/* toast */}
       <ToastDemo />
