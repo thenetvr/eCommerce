@@ -6,7 +6,7 @@ const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos"
 // retrieve api key, declare it as <type string> and ASSUME it to be with 'as string'
 const API_KEY: string = process.env.DATA_API_KEY as string
 
-// READ route
+// READ route == http://localhost:3000/api/todos
 export async function GET() {
   const res = await fetch(DATA_SOURCE_URL)
 
