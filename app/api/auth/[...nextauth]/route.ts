@@ -13,21 +13,19 @@ export const authOptions = {
       credentials: {},
       // declare 'authorize' function that will activate once API endpoint is hit
       async authorize(credentials) {
+        // retrieve 'email' and 'password' from credentials when endpoint is hit
+        // just like req.body
         const { email, password } = credentials;
 
         try {
           // find a user with specified email, return nothing if not found
           await connectDB();
           const user = await User.findOne({ email });
-          if (!user) {
-            return null;
-          }
+          if (!user) return null;
 
           // check if hashed passwords match
           const passwordsMatch = await bcrypt.compare(password, user.password);
-          if (!passwordsMatch) {
-            return null;
-          }
+          if (!passwordsMatch) return null;
 
           // replace built-in credential provider user.name property to be returned with user.fullname from DB
           user.name = user?.fullname || "";
