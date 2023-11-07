@@ -8,7 +8,7 @@ export default function page() {
       <h1 className="text-3xl font-bold">Contact Us</h1>
       <p>Please fill in the form</p>
       <ContactForm />
-      <ContactData/>
+      <ContactData />
     </div>
   );
 }
