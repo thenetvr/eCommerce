@@ -13,7 +13,7 @@ export async function GET() {
   }
 }
 
-export async function POST(req) {
+export async function POST(req: Request) {
   const { fullname, email, message } = await req.json();
 
   try {
