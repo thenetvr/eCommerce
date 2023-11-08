@@ -44,7 +44,7 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 
   // provide specific page for the login
-  pages: { signIn: "/" },
+  pages: { signIn: "/auth/login" },
 };
 
 // create an Auth handler using NextAuth() with auth Options
