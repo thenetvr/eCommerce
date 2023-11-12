@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/command";
 // combo box
 import { ComboboxDemo } from "@/components/combo";
+import ProductCard from "@/components/ProductCard";
 
 export default function Test() {
   const objectsArray = [
@@ -135,6 +136,14 @@ export default function Test() {
       </Command>
       {/* combo box */}
       <ComboboxDemo />
+      <div className="w-80">
+        <ProductCard
+          title="New Item"
+          description="This is a new item"
+          content="Great things happen with this new item and it will continue to happen"
+          footer="This is the footer"
+        />
+      </div>
     </div>
   );
 }
