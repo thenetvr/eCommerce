@@ -2,7 +2,7 @@ import User from "@/app/models/user";
 import connectDB from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
-export async function POST(req) {
+export async function POST(req:any) {
   try {
     // retrieve email from user request body
     const { email } = await req.json();
