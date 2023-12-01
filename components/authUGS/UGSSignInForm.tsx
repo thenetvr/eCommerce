@@ -74,7 +74,7 @@ export default function UGSSignInForm() {
   })
     .then( (response)=> {
       console.log(response.data);
-      window.localStorage.setItem("signInToken",response.data);
+      window.localStorage.setItem("signInToken",JSON.stringify(response.data));
     })
     .catch((error) => {
       console.log(error);

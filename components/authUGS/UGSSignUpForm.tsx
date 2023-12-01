@@ -46,7 +46,7 @@ export default function SignupForm() {
   })
     .then( (response)=> {
       console.log(response.data);
-      window.localStorage.setItem("signUpToken",response.data);
+      window.localStorage.setItem("signUpToken",JSON.stringify(response.data));
     })
     .catch((error) => {
       console.log(error);
