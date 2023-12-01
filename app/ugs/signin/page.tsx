@@ -1,9 +1,9 @@
-import LoginForm from "@/components/auth/LoginForm";
+import UGSSignInForm from "@/components/authUGS/UGSSignInForm";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export default async function Login() {
+export default async function SignIn() {
   // try to retrieve the server session using the authOptions object
   // that contains the authorize(credentials) function that will
   // return the 'user' ('user' = {user: {firstName, email, password}})
@@ -15,7 +15,7 @@ export default async function Login() {
 
   return (
     <div>
-      <LoginForm />
+      <UGSSignInForm />
     </div>
   );
 }

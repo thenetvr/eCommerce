@@ -1,9 +1,9 @@
-import SignupForm from "@/components/auth/SignupForm";
+import UGSSignUpForm from "@/components/authUGS/UGSSignUpForm";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export default async function Signup() {
+export default async function SignUp() {
   // try to retrieve the server session using the authOptions object
   // that contains the authorize(credentials) function that will
   // return the 'user' ('user' = {user: {firstName, email, password}})
@@ -15,7 +15,7 @@ export default async function Signup() {
 
   return (
     <div>
-      <SignupForm />
+      <UGSSignUpForm />
     </div>
   );
 }
