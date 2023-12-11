@@ -78,7 +78,7 @@ export default function LoginForm() {
             </div>
           )}
           <Link className="text-sm mt-3 text-right" href={"/auth/signup"}>
-            Don't have an account? <span className="underline">Sign Up</span>
+            Dont have an account? <span className="underline">Sign Up</span>
           </Link>
         </form>
       </div>

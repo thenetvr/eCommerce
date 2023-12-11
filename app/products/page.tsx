@@ -26,8 +26,9 @@ export default function Products() {
 
   return (
     <div className={`${gridCols} ${gap} ${padding}`}>
-      {products.map((product) => (
+      {products.map((product, idx) => (
         <ProductCard
+          key={idx}
           title={product.title}
           description={product.description}
           image={product.image}

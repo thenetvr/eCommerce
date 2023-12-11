@@ -96,8 +96,9 @@ export default function ContactForm() {
       <div className="bg-slate-100 flex flex-col">
         {/* depending on message, change color */}
         {error &&
-          error.map((e) => (
+          error.map((e, idx) => (
             <div
+              key={idx}
               className={`${
                 success ? "text-green-600" : "text-red-600"
               } px-5 py-2`}

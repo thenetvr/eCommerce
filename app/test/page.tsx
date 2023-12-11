@@ -93,8 +93,8 @@ export default function Test() {
 
       {/* accordion */}
       <div className="w-1/3 rounded-lg bg-sky-300 p-3">
-        {objectsArray.map((object) => (
-          <Accordion type="single" collapsible>
+        {objectsArray.map((object, idx) => (
+          <Accordion key={idx} type="single" collapsible>
             <AccordionItem value="item-1">
               <AccordionTrigger>{object.title}</AccordionTrigger>
               <AccordionContent>{object.description}</AccordionContent>

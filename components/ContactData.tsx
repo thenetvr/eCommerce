@@ -35,8 +35,8 @@ export default function ContactData() {
     <div>
       <h1>Contact Data</h1>
       {data.length !== 0 ? (
-        data.map((user) => (
-          <div className="p-6 flex justify-between">
+        data.map((user, idx) => (
+          <div key={idx} className="p-6 flex justify-between">
             <div>
               <div>{user._id}</div>
               <div>{user.fullname}</div>

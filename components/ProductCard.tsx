@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { baseImage } from "../constants";
+import Image from "next/image";
 
 interface Props {
   title?: string;
@@ -25,7 +26,7 @@ export default function ProductCard(props: Props) {
     <Card>
       <CardHeader>
         <div className="flex justify-center">
-          <img
+          <Image
             className="rounded"
             src={cardImage}
             width={500}

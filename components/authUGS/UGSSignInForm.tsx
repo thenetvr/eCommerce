@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import React, { useReducer, useState } from "react";
 import axios from "axios";
 
-
 // Interface for our state
 interface FormState {
   username: string;
@@ -28,7 +27,7 @@ export default function UGSSignInForm() {
   );
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const { username, password } = state;
@@ -51,34 +50,37 @@ export default function UGSSignInForm() {
     // } catch (err) {
     //   console.log(err);
     // }
- // check if all fields are entered
-//  for (const key in state) {
-//     if (state[key as string] === "") {
-//       console.log("please fill in the username and password fields");
-//       return;
-//     }
-//   }
-  let configHeaders = {
-    headers : {
-      'username': state.username,
-      'password': state.password,
+    // check if all fields are entered
+    //  for (const key in state) {
+    //     if (state[key as string] === "") {
+    //       console.log("please fill in the username and password fields");
+    //       return;
+    //     }
+    //   }
+    let configHeaders = {
+      headers: {
+        username: state.username,
+        password: state.password,
+      },
+    };
 
-    }
-  }
-
-  axios.get("http://localhost:3000/api/ugs/signin", {
-    headers :{
-    'username': state.username,
-    'password': state.password,
-    }
-  })
-    .then( (response)=> {
-      console.log(response.data);
-      window.localStorage.setItem("signInToken",JSON.stringify(response.data));
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    axios
+      .get("http://localhost:3000/api/ugs/signin", {
+        headers: {
+          username: state.username,
+          password: state.password,
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        window.localStorage.setItem(
+          "signInToken",
+          JSON.stringify(response.data)
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     console.log(localStorage.getItem("signInToken"));
     console.log(state);
   };
@@ -109,7 +111,7 @@ export default function UGSSignInForm() {
             </div>
           )}
           <Link className="text-sm mt-3 text-right" href={"/ugs/signup"}>
-            Don't have an account? <span className="underline">Sign Up</span>
+            Dont have an account? <span className="underline">Sign Up</span>
           </Link>
         </form>
       </div>
