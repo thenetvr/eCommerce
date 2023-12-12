@@ -20,7 +20,7 @@ export default function ContactData() {
   }, []);
 
   // DELETE
-  const handleDelete = async (id) => {
+  const handleDelete = async (id : any) => {
     const res = await fetch(`api/contact/${id}`, {
       method: "DELETE",
       headers: {

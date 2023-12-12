@@ -5,7 +5,7 @@ import FaceBookIcon from "../public/facebook.png";
 import InstagramIcon from "../public/instagram.png";
 import YoutubeIcon from "../public/youtube.png";
 import DiscordIcon from "../public/discord.png";
-import Link from "next/Link";
+import Link from "next/link";
 export default function Footer() {
   const socialMedia = {
     "https://www.facebook.com/thenetvr": FaceBookIcon,

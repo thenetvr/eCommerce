@@ -31,7 +31,7 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 // combo box
-import { ComboboxDemo } from "@/components/combo";
+import { ComboboxDemo } from "@/components/Combo";
 import ProductCard from "@/components/ProductCard";
 
 export default function Test() {

@@ -1,5 +1,5 @@
-import Hero from "@/components/testing/hero";
-import LearnMore from "@/components/testing/learnMore";
+import Hero from "@/components/testing/Hero";
+import LearnMore from "@/components/testing/LearnMore";
 import React from "react";
 import CustomizeTheater from "@/components/testing/CustomizeTheater";
 
