@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 export default function Navbar() {
   return (
     <div className="sticky top-0 z-50">
