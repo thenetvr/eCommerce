@@ -13,8 +13,8 @@ export async function POST(req: Request) {
     "currencyId": headers().get("currencyId")
   });
 
-  playerId = headers().get("playerId") as string;
-  idToken = headers().get("idToken") as string;
+  playerId = headers().get("playerId") as any;
+  idToken = headers().get("idToken") as any;
   currencyId = headers().get("currencyId") as string;
   
   var myHeaders = new Headers();
@@ -24,7 +24,8 @@ export async function POST(req: Request) {
   myHeaders.append("analytics-user-id", playerId);
   myHeaders.append("Accept", "application/json");
   myHeaders.append("Authorization","Bearer "+idToken);
-
+  console.log(playerId);
+  console.log("Bearer "+idToken);
 
   var requestOptions = {
     method: 'POST',
