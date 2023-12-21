@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Navbar />
         <Toaster />
-        <main>
+        <main className="text-white bg-[#3E6389] sticky">
           <AuthProvider>{children}</AuthProvider>
         </main>
         <Footer />
