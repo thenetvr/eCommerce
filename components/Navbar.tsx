@@ -32,10 +32,10 @@ export default function Navbar() {
             Asset maker
           </Link>
           <Link
-            href={""}
+            href={"/ugs/lux"}
             className="mx-9 mt-[20px] text-gray-300"
           >
-            Player Search
+            Lux
           </Link>
         </div>
       </div>
