@@ -11,7 +11,7 @@ export default function LuxPage() {
                 <p className="text-[#285DFF] text-[10px]"> New </p>
                 <p className={"font-bold text-xl"}>Buy 100 Lux</p>
                 <Image src={"/ep_money.png"} width={"130"} height={"130"}/>
-                <p className="flex justify-between text-xl mb-5 items-center">
+                <p className="flex justify-between text-xl mb-5 items-center [&>*]:ease-in-out [&>*]:duration-100 [&>*]:delay-100">
                     <span className="hover:text-[#285DFF]">+</span>
                     <span className="bg-[#488BC1] hover:bg-gradient-to-r from-[#285DFF] to-[#361158] rounded-[6px] w-1/2 h-9 inline-flex justify-center items-center">Buy</span>
                     <span className="hover:text-[#285DFF] mr-4 text-2xl"><code>&#8212;</code></span>
@@ -24,7 +24,7 @@ export default function LuxPage() {
                     <p className="text-[#285DFF] text-[10px]"> New </p>
                     <p className={"font-bold text-xl"}>Buy 100 Lux</p>
                     <Image src={"/ep_money.png"} width={"130"} height={"130"}/>
-                    <p className="flex justify-between mb-5 text-xl items-center">
+                    <p className="flex justify-between mb-5 text-xl items-center [&>*]:ease-in-out [&>*]:duration-100 [&>*]:delay-100">
                         <span className="hover:text-[#285DFF]">+</span>
                         <span className="bg-[#488BC1] hover:bg-gradient-to-r from-[#285DFF] to-[#361158] rounded-[6px] w-1/2 h-9 inline-flex justify-center items-center">Buy</span>
                         <span className="hover:text-[#285DFF] mr-4 text-2xl"><code>&#8212;</code></span>

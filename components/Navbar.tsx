@@ -18,7 +18,7 @@ export default function Navbar() {
             />{" "}
           </Link>
         </div>
-        <div className="my-auto text-lg hover:[&>*]:text-[#F6AF3B]">
+        <div className="my-auto text-lg [&>*]:ease-in-out [&>*]:duration-100 [&>*]:delay-100 hover:[&>*]:text-[#F6AF3B]">
           <Link
             href={"/ugs/store"}
             className="mx-9 text-gray-300"
