@@ -2,13 +2,13 @@ import React from 'react'
 import { Dropdown, DropdownTrigger, Button, DropdownItem, DropdownMenu } from "@nextui-org/react"
 import { useState } from 'react'
 
-const Category = () => {
+const Dropdonwn = () => {
 
-  const [selectedCategory, setSelectedCategory] = React.useState<any>(new Set(["text"]));
+  const [selectedItem, setSelectedItem] = React.useState<any>(new Set(["text"]));
 
   const selectedValue = React.useMemo(
-    () => Array.from(selectedCategory).join(", ").replaceAll("_", " "),
-    [selectedCategory]
+    () => Array.from(selectedItem).join(", ").replaceAll("_", " "),
+    [selectedItem]
   );
 
   return (
@@ -26,8 +26,8 @@ const Category = () => {
         variant="flat"
         disallowEmptySelection
         selectionMode="single"
-        selectedKeys={selectedCategory}
-        onSelectionChange={setSelectedCategory}
+        selectedKeys={selectedItem}
+        onSelectionChange={selectedItem}
       >
         <DropdownItem key="text">Text</DropdownItem>
         <DropdownItem key="number">Number</DropdownItem>
@@ -39,4 +39,4 @@ const Category = () => {
   );
 }
 
-export default Category
+export default Dropdonwn

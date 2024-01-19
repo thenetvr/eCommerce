@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/Image'
 import NavbarBackDrop from "@/components/NavbarBackDrop";
-import Category from './ui/category';
+import Category from './ui/dropdown';
 export default function LuxPage() {
     //mt-20
     const displayCards = () => {
@@ -43,7 +43,7 @@ export default function LuxPage() {
             <div className={"pt-20 pl-8 h-fit"}>
 
                 <div className="flex [&>*]:mr-14">
-                    <Category />
+
                     {displayCards()}
                 </div>
                 <div className={"flex [&>*]:mr-14 mt-4 pb-8"}>

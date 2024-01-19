@@ -3,7 +3,8 @@ import Image from 'next/Image'
 import NavbarBackDrop from "@/components/NavbarBackDrop";
 import { JSX, useState } from 'react';
 import React from 'react';
-import Category from './ui/category'
+import Sidebar from './ui/sidebar';
+
 
 
 
@@ -31,7 +32,7 @@ export default function AssetPage() {
             formatProducts.push(
                 <div className="mb-[40px]">
                     <h1 className="text-xl mt-[20px] ml-[10px] mb-[20px]"> {productSections[i]} </h1>
-                    <div className="flex justify-between">
+                    <div className="flex flex-wrap justify-between ">
                         {displayShirts()}
                     </div>
                 </div>
@@ -42,16 +43,30 @@ export default function AssetPage() {
     //bg-[length:30px_20px] bg-no-repeat bg-magnifyingGlass ml-[10px] pl-[40px] mt-[40px] mb-[20px] bg-[#3E6389] placeholder-white w-80 h-6 border-2 rounded
     return (
         <div>
+
             <NavbarBackDrop name={"The Net VR Assets"} />
-            <div className="relative h-fit w-fit">
-                <input type="text" className="bg-[length:30px_20px] bg-no-repeat bg-magnifyingGlass ml-[10px] pl-[40px] mt-[40px] mb-[20px] bg-[#3E6389] placeholder-white w-80 h-6 border-2 rounded" placeholder="Search" />
-                <Category />
+
+            <div className='flex flex-auto'>
+                <Sidebar />
+                <div className=" flex-col relative h-fit w-fit">
+                    <input type="text" className="bg-[length:30px_20px] bg-no-repeat bg-magnifyingGlass ml-[10px] pl-[40px] mt-[40px] mb-[20px] bg-[#3E6389] placeholder-white w-80 h-6 border-2 rounded" placeholder="Search" />
+                    <div className=''>
+                        {showProducts()}
+                    </div>
+
+                    <br />
+
+
+
+
+                </div>
+
+
             </div>
 
-            {showProducts()}
-
-            <br />
 
 
-        </div>);
+        </div>
+
+    );
 }
