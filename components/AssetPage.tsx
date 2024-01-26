@@ -32,7 +32,7 @@ export default function AssetPage() {
             formatProducts.push(
                 <div className="mb-[40px]">
                     <h1 className="text-xl mt-[20px] ml-[10px] mb-[20px]"> {productSections[i]} </h1>
-                    <div className="flex flex-wrap justify-between ">
+                    <div className=" flex-container">
                         {displayShirts()}
                     </div>
                 </div>
