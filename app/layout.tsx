@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Navbar />
         <Toaster />
-        <main className="text-white bg-[#3E6389]">
+        <main className="text-white bg-[#1E293B]">
           <AuthProvider>{children}</AuthProvider>
         </main>
         <Footer />
