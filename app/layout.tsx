@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { AuthProvider } from "./Providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import "./background.css";
 
 
 export const fontSans = FontSans({
