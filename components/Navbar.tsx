@@ -14,7 +14,7 @@ export default function Navbar() {
                 Store
               </Link>
               <Link
-                href={""}
+                href={"/"}
                 className="text-gray-300"
               >
                 Asset
@@ -28,7 +28,7 @@ export default function Navbar() {
           </div>
 
           <div className={"w-1/3 flex justify-center [&>*]:ease-in-out [&>*]:duration-100 [&>*]:delay-100 hover:[&>*]:text-[#F6AF3B]"}>
-              <Link href={"/testing"} className={"logo text-gray-300"}>
+              <Link href={"/"} className={"logo text-gray-300"}>
                 THE NET VR
               </Link>
           </div>
