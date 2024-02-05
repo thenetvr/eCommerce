@@ -1,0 +1,652 @@
+.back {
+
+
+    /* bgframe */
+
+    position: absolute;
+    width: 1299px;
+    height: 1197px;
+    left: 0px;
+    top: 0px;
+
+
+
+    /* center */
+
+    position: absolute;
+    visibility: hidden;
+    width: 1667.68px;
+    height: 1217.45px;
+    left: -210px;
+    top: 0px;
+
+    opacity: 0.7;
+
+
+    /* Rectangle 167 */
+
+    position: absolute;
+    width: 1300px;
+    height: 644px;
+    left: 157.68px;
+    top: 60px;
+
+    background: #070707;
+
+
+    /* Group 302 */
+
+    position: absolute;
+    width: 1542.08px;
+    height: 1217.45px;
+    left: -210px;
+    top: 0px;
+
+
+
+    /* orbit */
+
+    position: absolute;
+    width: 1515.37px;
+    height: 1217.45px;
+    left: -210px;
+    top: 0px;
+
+    opacity: 0.7;
+
+
+    /* Ellipse 130 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1342px;
+    height: 706px;
+    left: 95.68px;
+    top: 0px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(25.66deg);
+
+
+    /* Ellipse 131 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 849.93px;
+    height: 397.42px;
+    left: 326.02px;
+    top: 138.78px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(25.66deg);
+
+
+    /* Ellipse 132 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 572.28px;
+    height: 253.63px;
+    left: 461.04px;
+    top: 230px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(25.66deg);
+
+
+    /* Vector */
+
+    position: absolute;
+    width: 681.39px;
+    height: 645.1px;
+    left: 650.68px;
+    top: 185px;
+
+    background: radial-gradient(45.63% 34.98% at 50% 50%, #EA2020 0%, rgba(242, 141, 84, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    opacity: 0.8;
+    filter: blur(42px);
+
+
+    /* Vector */
+
+    position: absolute;
+    width: 342px;
+    height: 342px;
+    left: 484.68px;
+    top: 32px;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(157, 99, 230, 0.8) 0%, rgba(71, 68, 247, 0.464) 100%);
+    opacity: 0.8;
+    filter: blur(55px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 125 */
+
+    position: absolute;
+    width: 277.18px;
+    height: 277.18px;
+    left: 500.7px;
+    top: 322.38px;
+
+    /* gradient */
+    background: radial-gradient(50% 50% at 50% 50%, #FFE7FB 0%, #E422C5 100%);
+    filter: blur(47px);
+
+
+    /* Ellipse 126 */
+
+    position: absolute;
+    width: 174.89px;
+    height: 174.89px;
+    left: 551.85px;
+    top: 373.52px;
+
+    background: radial-gradient(50% 78.3% at 50% 50%, #9DB6F7 2.08%, rgba(109, 158, 252, 0.728723) 43.75%, rgba(107, 157, 253, 0) 100%);
+    filter: blur(15px);
+
+
+    /* Vector 1 */
+
+    position: absolute;
+    width: 275px;
+    height: 299px;
+    left: 612.68px;
+    top: 185px;
+
+    filter: blur(37px);
+
+
+    /* Ellipse 127 */
+
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 226.68px;
+    top: 142px;
+
+    background: radial-gradient(65.16% 65.16% at 49.43% 26.44%, #000000 0%, #1A366D 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 94px rgba(239, 250, 254, 0.35);
+
+
+    /* Ellipse 128 */
+
+    position: absolute;
+    width: 167px;
+    height: 167px;
+    left: 934.68px;
+    top: 356px;
+
+    background: radial-gradient(58.59% 71.86% at 29.94% 18.56%, #000000 0%, #060201 27.08%, #621B17 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 154px rgba(244, 223, 220, 0.65);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+    /* Ellipse 130 */
+
+    position: absolute;
+    width: 133px;
+    height: 133px;
+    left: 418.68px;
+    top: 615px;
+
+    background: radial-gradient(82.71% 82.71% at 17.29% 38.35%, #3E6BAE 0.52%, #3E64AE 61.46%, #A3DCFF 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 154px rgba(244, 223, 220, 0.65);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+    /* Mask group */
+
+    position: absolute;
+    width: 737px;
+    height: 737px;
+    left: 112px;
+    top: 185px;
+
+    mix-blend-mode: normal;
+
+
+    /* Rectangle */
+
+    /* position: absolute;
+    width: 737px;
+    height: 737px;
+    left: 112px;
+    top: 185px;
+
+    background: url(.png);
+    mix-blend-mode: normal; */
+
+
+    /* Ellipse 129 */
+
+    position: absolute;
+    width: 133px;
+    height: 133px;
+    left: 418.68px;
+    top: 482px;
+
+    background: linear-gradient(49.72deg, rgba(255, 255, 255, 0) 39.55%, #FFFFFF 85.35%);
+    opacity: 0.5;
+
+
+    /* Ellipse 130 */
+
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 551.68px;
+    top: 253px;
+
+    background: radial-gradient(82.71% 82.71% at 17.29% 38.35%, #744003 0.52%, #6B3A08 61.46%, #9A6F41 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    mix-blend-mode: normal;
+    box-shadow: 10px 10px 34px #DA25C9;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
+
+    /* right */
+
+    position: absolute;
+    width: 1742.08px;
+    height: 1282.45px;
+    left: 1837.68px;
+    top: -145px;
+
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Rectangle 167 */
+
+    position: absolute;
+    width: 1300px;
+    height: 644px;
+    left: 1470px;
+    top: -20px;
+
+    background: #070707;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Group 302 */
+
+    position: absolute;
+    width: 1742.08px;
+    height: 1282.45px;
+    left: 1837.68px;
+    top: -145px;
+
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* orbit */
+
+    position: absolute;
+    width: 1515.37px;
+    height: 1217.45px;
+    left: 1837.68px;
+    top: -80px;
+
+    opacity: 0.7;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 130 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1342px;
+    height: 706px;
+    left: 1532px;
+    top: -80px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+
+
+    /* Ellipse 131 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 849.93px;
+    height: 397.42px;
+    left: 1301.66px;
+    top: 58.78px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+
+
+    /* Ellipse 132 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 572.28px;
+    height: 253.63px;
+    left: 1166.65px;
+    top: 150px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+
+
+    /* Vector */
+
+    position: absolute;
+    width: 681.39px;
+    height: 645.1px;
+    left: 777px;
+    top: -145px;
+
+    background: radial-gradient(45.63% 34.98% at 50% 50%, #EA2020 0%, rgba(242, 141, 84, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    opacity: 0.8;
+    filter: blur(42px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Vector */
+
+    position: absolute;
+    width: 342px;
+    height: 342px;
+    left: 1143px;
+    top: -48px;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(157, 99, 230, 0.8) 0%, rgba(71, 68, 247, 0.464) 100%);
+    opacity: 0.8;
+    filter: blur(55px);
+
+
+    /* Ellipse 125 */
+
+    position: absolute;
+    width: 277.18px;
+    height: 277.18px;
+    left: 1126.98px;
+    top: 242.38px;
+
+    /* gradient */
+    background: radial-gradient(50% 50% at 50% 50%, #FFE7FB 0%, #E422C5 100%);
+    opacity: 0.6;
+    filter: blur(47px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 126 */
+
+    position: absolute;
+    width: 174.89px;
+    height: 174.89px;
+    left: 1075.83px;
+    top: 293.52px;
+
+    background: radial-gradient(50% 78.3% at 50% 50%, #9DB6F7 2.08%, rgba(109, 158, 252, 0.728723) 43.75%, rgba(107, 157, 253, 0) 100%);
+    opacity: 0.6;
+    filter: blur(15px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Vector 1 */
+
+    position: absolute;
+    width: 275px;
+    height: 299px;
+    left: 1160px;
+    top: 346px;
+
+    filter: blur(37px);
+
+
+    /* Ellipse 127 */
+
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 1401px;
+    top: 62px;
+
+    background: radial-gradient(65.16% 65.16% at 49.43% 26.44%, #000000 0%, #1A366D 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 94px rgba(239, 250, 254, 0.35);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 128 */
+
+    position: absolute;
+    width: 167px;
+    height: 167px;
+    left: 1358px;
+    top: 532px;
+
+    background: radial-gradient(58.59% 71.86% at 29.94% 18.56%, #000000 0%, #060201 27.08%, #621B17 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 154px rgba(244, 223, 220, 0.65);
+    transform: rotate(180deg);
+
+
+    /* Ellipse 129 */
+
+    position: absolute;
+    width: 133px;
+    height: 133px;
+    left: 719px;
+    top: 665px;
+
+    background: radial-gradient(82.71% 82.71% at 17.29% 38.35%, #1B073D 0.52%, #3B1A66 61.46%, #661F80 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 154px rgba(244, 223, 220, 0.65);
+    transform: rotate(180deg);
+
+
+    /* Ellipse 130 */
+
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 1076px;
+    top: 173px;
+
+    background: radial-gradient(82.71% 82.71% at 17.29% 38.35%, #744003 0.52%, #6B3A08 61.46%, #9A6F41 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    mix-blend-mode: normal;
+    box-shadow: 10px 10px 34px #DA25C9;
+    transform: rotate(180deg);
+
+
+    /* brownright */
+
+    position: absolute;
+    visibility: hidden;
+    width: 1515.37px;
+    height: 1217.45px;
+    left: 246.71px;
+    top: -203px;
+
+
+
+    /* orbit */
+
+    position: absolute;
+    width: 1515.37px;
+    height: 1217.45px;
+    left: 1762.08px;
+    top: -203px;
+
+    opacity: 0.7;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 130 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1342px;
+    height: 706px;
+    left: 1456.39px;
+    top: -203px;
+
+    transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+
+
+    /* Ellipse 131 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 849.93px;
+    height: 397.42px;
+    left: 1226.05px;
+    top: -64.22px;
+
+    transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+
+
+    /* Ellipse 132 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 572.28px;
+    height: 253.63px;
+    left: 1091.04px;
+    top: 27px;
+
+    transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+
+
+    /* Vector 1 */
+
+    position: absolute;
+    width: 275px;
+    height: 299px;
+    left: 1230.11px;
+    top: 143.9px;
+
+    opacity: 0.7;
+    filter: blur(37px);
+    transform: matrix(-0.95, -0.31, -0.31, 0.95, 0, 0);
+
+
+    /* Vector */
+
+    position: absolute;
+    width: 681.39px;
+    height: 645.1px;
+    left: 248px;
+    top: -58px;
+
+    background: radial-gradient(45.63% 34.98% at 50% 50%, #EA8120 0%, rgba(242, 141, 84, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    opacity: 0.7;
+    filter: blur(42px);
+
+
+    /* Vector */
+
+    position: absolute;
+    width: 342px;
+    height: 342px;
+    left: 1067.39px;
+    top: -171px;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(230, 154, 99, 0.8) 0%, rgba(71, 68, 247, 0.464) 100%);
+    opacity: 0.8;
+    filter: blur(55px);
+
+
+    /* Ellipse 125 */
+
+    position: absolute;
+    width: 277.18px;
+    height: 277.18px;
+    left: 1051.37px;
+    top: 119.38px;
+
+    background: radial-gradient(50% 50% at 50% 50%, #FFEFE7 0%, #E45122 100%);
+    filter: blur(47px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 126 */
+
+    position: absolute;
+    width: 174.89px;
+    height: 174.89px;
+    left: 1000.23px;
+    top: 170.52px;
+
+    background: radial-gradient(50% 78.3% at 50% 50%, #F79D9D 2.08%, rgba(252, 195, 109, 0.728723) 43.75%, rgba(253, 203, 107, 0) 100%);
+    filter: blur(15px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 127 */
+
+    position: absolute;
+    width: 87px;
+    height: 87px;
+    left: 1176.39px;
+    top: -31px;
+
+    background: radial-gradient(65.16% 65.16% at 49.43% 26.44%, #000000 0%, #6D241A 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 94px rgba(239, 250, 254, 0.35);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+    /* Ellipse 128 */
+
+    position: absolute;
+    width: 167px;
+    height: 167px;
+    left: 570px;
+    top: 573px;
+
+    background: radial-gradient(58.59% 71.86% at 29.94% 18.56%, #000000 0%, #060201 27.08%, #7D4714 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    box-shadow: 0px 0px 154px rgba(244, 223, 220, 0.65);
+    transform: rotate(180deg);
+
+
+    /* Ellipse 130 */
+
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 851.39px;
+    top: 80px;
+
+    background: radial-gradient(82.71% 82.71% at 17.29% 38.35%, #744003 0.52%, #6B3A08 61.46%, #9A6F41 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    mix-blend-mode: normal;
+    box-shadow: 10px 10px 34px #DA25C9;
+    transform: rotate(180deg);
+
+}

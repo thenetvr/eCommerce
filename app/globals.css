@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* styles for contact form */
-.contactForm > div {
+.contactForm>div {
   @apply flex flex-col gap-2;
 }
 
@@ -85,6 +85,7 @@ input {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
