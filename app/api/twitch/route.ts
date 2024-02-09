@@ -1,6 +1,11 @@
-// pages/api/eventsub.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import crypto from 'crypto';
+
+
+if (!process.env.TWITCH_SECRET) {
+  console.error("The TWITCH_SECRET environment variable is not set.");
+  process.exit(1); // Exit the process with an error code
+}
 
 // Disables automatic body parsing to access the raw body
 export const config = {
@@ -24,11 +29,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const TWITCH_MESSAGE_SIGNATURE = 'Twitch-Eventsub-Message-Signature'.toLowerCase();
       const MESSAGE_TYPE = 'Twitch-Eventsub-Message-Type'.toLowerCase();
 
-      const secret = getSecret(); // Needs to be implemented (securely retrieves secret)
+      const secret = getSecret(); 
       const message = getHmacMessage(req.headers, rawBody);
       const hmac = `sha256=` + getHmac(secret, message);
 
-      if (verifyMessage(hmac, req.headers[TWITCH_MESSAGE_SIGNATURE] || '')) {
+      // Extract the signature header and ensure it's treated as a string (not string array)
+      const signatureHeader = req.headers[TWITCH_MESSAGE_SIGNATURE];
+      const signature = Array.isArray(signatureHeader) ? signatureHeader[0] : signatureHeader;
+
+      if (verifyMessage(hmac, signature || '')) {
         console.log("Signatures match");
 
         const notification = JSON.parse(rawBody);
@@ -37,13 +46,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           case 'notification':
             console.log(`Event type: ${notification.subscription.type}`);
             console.log(JSON.stringify(notification.event, null, 4));
+
+            // TODO: Need to handle notification when it comes in
+
+            // "The type field in the body of the request identifies the type of event, 
+            //  and the event field contains the event’s data."
+
             res.status(204).end();
             break;
           case 'webhook_callback_verification':
+
+            // Might need to use this instead: res.set('Content-Type', 'text/plain').status(200).send(notification.challenge);
             res.status(200).send(notification.challenge);
             break;
           case 'revocation':
             console.log(`${notification.subscription.type} notifications revoked!`);
+            console.log(`reason: ${notification.subscription.status}`);
+            console.log(`condition: ${JSON.stringify(notification.subscription.condition, null, 4)}`);
             res.status(204).end();
             break;
           default:
@@ -62,8 +81,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 function getSecret(): string {
-  // Implement secure retrieval of your secret
-  return 'secret goes here';
+  return process.env.TWITCH_SECRET || '';
 }
 
 function getHmacMessage(headers: NodeJS.Dict<string | string[]>, body: string): string {
@@ -77,35 +95,3 @@ function getHmac(secret: string, message: string): string {
 function verifyMessage(hmac: string, verifySignature: string): boolean {
   return crypto.timingSafeEqual(Buffer.from(hmac), Buffer.from(verifySignature));
 }
-
-
-
-
-
-
-
-
-
-/*
-import { buffer } from 'micro'
-import type { NextApiRequest, NextApiResponse } from "next";
-
-export default async (req: NextApiRequest, res: NextApiResponse) {
-    const rawBody = (await buffer(req)).toString()
-    const data = JSON.parse(rawBody)
-    const signature = req.headers['x-kc-signature']?.toString()
-  
-    if (!signature
-          && !signatureHelper.isValidSignatureFromString(rawBody, process.env.WEBHOOK_SECRET, signature) {
-      return res.status(401)
-
-    }
-}
-
-export const config = {
-    api: {
-      bodyParser: false,
-    },
-  }
-
-  */
