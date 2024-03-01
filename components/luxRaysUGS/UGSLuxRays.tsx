@@ -12,6 +12,9 @@ interface FormState {
 }
 
 export default function SignupForm() {
+  if (typeof window !== 'undefined') {
+    return false;  
+  }
     var myHeaders = new Headers();
     myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
     myHeaders.append("idToken", JSON.parse(localStorage.getItem("signInToken") as string).idToken as string);
@@ -40,6 +43,9 @@ export default function SignupForm() {
   const router = useRouter();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    if (typeof window !== 'undefined') {
+      return false;
+    }
     e.preventDefault();
 
     // destructure state
@@ -67,6 +73,9 @@ export default function SignupForm() {
     console.log(state);
   };
   async function increment(currencyId: string, amount: number){
+    if (typeof window !== 'undefined') {
+      return false;
+    }
     console.log("increment");
     var myHeaders = new Headers(); 
     myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
@@ -85,6 +94,9 @@ export default function SignupForm() {
     window.location.reload();
 };
   function decrement(currencyId: string, amount: number){
+    if (typeof window !== 'undefined') {
+      return false;
+    }
     console.log("decrement");
     var myHeaders = new Headers(); 
     myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
