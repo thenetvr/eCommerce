@@ -1,4 +1,5 @@
 import UGSLuxRays from "@/components/luxRaysUGS/UGSLuxRays";
+import EmbeddedStripe from "@/components/stripe/EmbeddedStripe";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
@@ -16,6 +17,9 @@ export default async function LuxRays() {
     return (
       <div>
         <UGSLuxRays />
+        test
+        <EmbeddedStripe></EmbeddedStripe>
+        test
       </div>
     );
   }

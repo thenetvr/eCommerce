@@ -12,6 +12,7 @@ interface FormState {
 }
 
 export default function SignupForm() {
+  if (typeof window !== 'undefined') {
     var myHeaders = new Headers();
     myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
     myHeaders.append("idToken", JSON.parse(localStorage.getItem("signInToken") as string).idToken as string);
@@ -25,10 +26,10 @@ export default function SignupForm() {
     .then(result => {console.log(JSON.parse(result).results[0].balance), localStorage.setItem("LUXRAYSBalance",JSON.parse(result).results[0].balance)})
     .catch(error => console.log('error', error));
 
-
+  }
   const [state, setState] = useState(
     {
-      luxRays: localStorage.getItem("LUXRAYSBalance") as unknown as number,
+      luxRays: (localStorage.getItem("LUXRAYSBalance") as unknown as number),
     }
     
   );

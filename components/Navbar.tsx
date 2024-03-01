@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <div className={"w-1/3 flex justify-around [&>*]:ease-in-out [&>*]:duration-100 [&>*]:delay-100"}>
               <Link href={""} className={"flex text-gray-300 hover:text-[#F6AF3B]"}>
-                  User profile <Image src={"/chevron-down.png"} width={20} height={20} className={"ml-2"}/>
+                  User profile <Image alt={"test"} src={"/chevron-down.png"} width={20} height={20} className={"ml-2"}/>
               </Link>
               <Link href={""} className={"text-gray-300 hover:text-[#F6AF3B]"}>
                   Cart(0)
