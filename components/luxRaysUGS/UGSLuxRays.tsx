@@ -12,22 +12,23 @@ interface FormState {
 }
 
 export default function SignupForm() {
-  if (typeof window !== 'undefined') {
-    return false;  
-  }
     var myHeaders = new Headers();
-    myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
-    myHeaders.append("idToken", JSON.parse(localStorage.getItem("signInToken") as string).idToken as string);
+    if (typeof window !== 'undefined') {
+      myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
+      myHeaders.append("idToken", JSON.parse(localStorage.getItem("signInToken") as string).idToken as string);
+    }
     var requestOptions = {
         method: 'GET',
         headers: myHeaders,
         redirect: 'follow'
       };
+    if (typeof window !== 'undefined') {
+
     fetch("http://localhost:3000/api/ugs/economy/currency/currentPlayerCurrency", requestOptions as any)
     .then(response => response.text())
     .then(result => {console.log(JSON.parse(result).results[0].balance), localStorage.setItem("LUXRAYSBalance",JSON.parse(result).results[0].balance)})
     .catch(error => console.log('error', error));
-
+    }
 
   var state:any, setState;
   if (typeof window !== 'undefined') {
@@ -44,8 +45,7 @@ export default function SignupForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     if (typeof window !== 'undefined') {
-      return false;
-    }
+
     e.preventDefault();
 
     // destructure state
@@ -72,10 +72,10 @@ export default function SignupForm() {
     console.log(localStorage.getItem("signUpToken"));
     console.log(state);
   };
+  };
   async function increment(currencyId: string, amount: number){
     if (typeof window !== 'undefined') {
-      return false;
-    }
+    
     console.log("increment");
     var myHeaders = new Headers(); 
     myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
@@ -92,11 +92,10 @@ export default function SignupForm() {
     .then(result => localStorage.setItem("LUXRAYSBalance",JSON.parse(result).balance))
     .catch(error => console.log('error', error));
     window.location.reload();
-};
+  };
+  };
   function decrement(currencyId: string, amount: number){
     if (typeof window !== 'undefined') {
-      return false;
-    }
     console.log("decrement");
     var myHeaders = new Headers(); 
     myHeaders.append("playerId", JSON.parse(localStorage.getItem("signInToken") as string).userId as string);
@@ -114,6 +113,7 @@ export default function SignupForm() {
     .catch(error => console.log('error', error));
     window.location.reload();
 
+    }
   }
   return (
     <div className="grid place-items-center h-screen">
