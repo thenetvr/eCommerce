@@ -8,11 +8,11 @@ if (!process.env.TWITCH_SECRET) {
 }
 
 // Disables automatic body parsing to access the raw body
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
