@@ -2,10 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import crypto from 'crypto';
 
 
-if (!process.env.TWITCH_SECRET) {
-  console.error("The TWITCH_SECRET environment variable is not set.");
-  process.exit(1); // Exit the process with an error code
-}
+// if (!process.env.TWITCH_SECRET) {
+//   console.error("The TWITCH_SECRET environment variable is not set.");
+//   process.exit(1); // Exit the process with an error code
+// }
 
 // Disables automatic body parsing to access the raw body
 // export const config = {
