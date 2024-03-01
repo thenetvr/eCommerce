@@ -8,7 +8,6 @@ import axios from "axios";
 // Interface for our state
 interface FormState {
   luxRays: number;
-  password: string;
 }
 
 export default function SignupForm() {
@@ -30,7 +29,11 @@ export default function SignupForm() {
     .catch(error => console.log('error', error));
     }
 
-  var state:any, setState;
+  var [state, setState] = useState(
+    {
+      luxRays: 0,
+    }
+  );
   if (typeof window !== 'undefined') {
     [state, setState] = useState(
       {
