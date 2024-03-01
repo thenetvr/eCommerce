@@ -26,12 +26,15 @@ export default function SignupForm() {
     .catch(error => console.log('error', error));
 
 
-  const [state, setState] = useState(
-    {
-      luxRays: localStorage.getItem("LUXRAYSBalance") as unknown as number,
-    }
+  var state:any, setState;
+  if (typeof window !== 'undefined') {
+    [state, setState] = useState(
+      {
+        luxRays: localStorage.getItem("LUXRAYSBalance") as unknown as number,
+      }
     
-  );
+    );
+  }
   const [error, setError] = useState("luxRays");
 
   const router = useRouter();
