@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/Image'
+import Image from 'next/image'
 import pic from './NetVR Ecommerce platform.png'
 
 

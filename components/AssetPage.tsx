@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/Image'
+import Image from 'next/image'
 import NavbarBackDrop from "@/components/NavbarBackDrop";
 import { JSX, useState } from 'react';
 import React from 'react';

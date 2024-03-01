@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/Image'
+import Image from 'next/image'
 import NavbarBackDrop from "@/components/NavbarBackDrop";
 import Category from './ui/category';
 export default function LuxPage() {
