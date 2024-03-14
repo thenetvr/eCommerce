@@ -10,18 +10,18 @@ export const metadata: Metadata = {
 export default function IndexPage(): JSX.Element {
   return (
     <ul className="card-list">
-      {/* <li>
-        <Link
-          href="/donate-with-embedded-checkout"
+      <li>
+        {/* <Link
+          href="/ugs/stripe/stripe-with-embedded-checkout"
           className="card checkout-style-background"
         >
           <h2 className="bottom">Buy LuxRays with embedded checkout</h2>
           <img src="/checkout-one-time-payments.svg" />
-        </Link>
-      </li> */}
+        </Link> */}
+      </li>
       <li>
         <Link
-          href="/donate-with-checkout"
+          href="/ugs/stripe/stripe-with-checkout"
           className="card checkout-style-background"
         >
           <h2 className="bottom">Buy LuxRays with Stripe checkout</h2>
@@ -30,7 +30,7 @@ export default function IndexPage(): JSX.Element {
       </li>
       {/* <li>
         <Link
-          href="/donate-with-elements"
+          href="/ugs/stripe/stripe-with-elements"
           className="card elements-style-background"
         >
           <h2 className="bottom">Buy LuxRays with Elements</h2>
