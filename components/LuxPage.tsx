@@ -2,6 +2,29 @@
 import Image from 'next/image'
 import NavbarBackDrop from "@/components/NavbarBackDrop";
 import Category from './ui/category';
+import React from 'react';
+
+
+interface CustomerInfo {
+    playerId: string;
+}
+const generateStripePaymentLink = (customerInfo: CustomerInfo): string => {
+    const baseUrl = 'https://buy.stripe.com/3cs28Q36fco06T64gg';
+  
+    const queryParams = new URLSearchParams();
+  
+    if (customerInfo.playerId) queryParams.append('prefill[name]', customerInfo.playerId);
+    return `${baseUrl}?${queryParams.toString()}`;
+};
+
+const customerInfo: CustomerInfo = {
+    playerId: JSON.parse(localStorage.getItem("signInToken") as string).userId as string,
+};
+  
+const paymentLink = generateStripePaymentLink(customerInfo);
+
+  
+
 export default function LuxPage() {
     //mt-20
     const displayCards = () => {
@@ -14,7 +37,9 @@ export default function LuxPage() {
                     <Image src={"/ep_money.png"} width={"130"} height={"130"} alt={''} />
                     <p className="flex justify-between text-xl mb-5 items-center [&>*]:ease-in-out [&>*]:duration-100 [&>*]:delay-100">
                         <span className="hover:text-[#285DFF]">+</span>
+                        <a href={paymentLink} target="_blank" rel="noopener noreferrer">
                         <span className="bg-[#488BC1] hover:bg-gradient-to-r from-[#285DFF] to-[#361158] rounded-[6px] w-1/2 h-9 inline-flex justify-center items-center">Buy</span>
+                        </a>
                         <span className="hover:text-[#285DFF] mr-4 text-2xl"><code>&#8212;</code></span>
                     </p>
                 </div>)
