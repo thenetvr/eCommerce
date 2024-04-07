@@ -65,7 +65,7 @@ export default function UGSSignInForm() {
     };
 
     axios
-      .get("http://localhost:3000/api/ugs/signin", {
+      .get("https://localhost:3000/api/ugs/signin", {
         headers: {
           username: state.username,
           password: state.password,

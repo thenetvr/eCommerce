@@ -15,9 +15,12 @@ const endpointSecret = process.env.WEBHOOK_SECRET as string;
 // };
 
 export default async function handler(
+  
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log("stripe webhooktest post");
+
   try {
     console.log("req.headers", req.headers);
     if (req.method !== "POST")

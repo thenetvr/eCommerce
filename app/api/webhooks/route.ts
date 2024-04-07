@@ -6,7 +6,8 @@ import { stripe } from "@/lib/stripe";
 
 export async function POST(req: Request) {
   let event: Stripe.Event;
-
+  console.log("**********************************");
+  console.log("stripe webhook post");
   try {
     event = stripe.webhooks.constructEvent(
       await (await req.blob()).text(),
@@ -41,14 +42,18 @@ export async function POST(req: Request) {
         case "checkout.session.completed":
           data = event.data.object as Stripe.Checkout.Session;
           console.log(`💰 CheckoutSession status: ${data.payment_status}`);
+          console.log("**** playerId: " + data.metadata.playerId);
           break;
         case "payment_intent.payment_failed":
           data = event.data.object as Stripe.PaymentIntent;
           console.log(`❌ Payment failed: ${data.last_payment_error?.message}`);
+          console.log("playerId" + data.metadata.playerId);
+
           break;
         case "payment_intent.succeeded":
           data = event.data.object as Stripe.PaymentIntent;
           console.log(`💰 PaymentIntent status: ${data.status}`);
+          // console.log("playerId" + data.metadata.playerId);
           break;
         default:
           throw new Error(`Unhandled event: ${event.type}`);

@@ -38,7 +38,7 @@ export default function SignupForm() {
       return;
     }
 
-    axios.get("http://localhost:3000/api/ugs/signup", {
+    axios.get("https://localhost:3000/api/ugs/signup", {
     headers :{
     'username': state.username,
     'password': state.password,

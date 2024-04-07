@@ -43,3 +43,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Test out the stripe webhook.
+1. _Optional_: download and run the [Stripe CLI](https://stripe.com/docs/stripe-cli)
+~~~shell
+$ stripe listen --forward-to localhost:3000/api/webhooks
+~~~
+2. Run the application
+~~~shell
+$ STRIPE_WEBHOOK_SECRET=$(stripe listen --print-secret) npm run dev
+~~~
+
+## Test on an HTTPS server
+Need to download mkcert
+
+mkcert using scoop from the github
+```
+https://github.com/FiloSottile/mkcert
+```
+run this command on the command line.
+```
+mkcert -key-file localhost-key.pem -cert-file localhost.pem localhost *.localhost
+```
+need to download next using 
+```
+npm install -g next
+```
+now run the following command in a cmd using admin privledges.
+```
+next dev --experimental-https
+```
